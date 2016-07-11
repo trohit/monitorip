@@ -8,18 +8,11 @@
 ##############################################################################
 AFTER_UP_DELAY=10
 AFTER_DOWN_DELAY=3
-DEVICE=$1 
 INTERFACE=wlp3s0
 ##############################################################################
 # how many secs to wait before declaring device as down
 ##############################################################################
 HYSTERISIS=10
-CMD="arping $DEVICE -I $INTERFACE -c $HYSTERISIS -f -w $HYSTERISIS"
-
-# housekeeping - used internally
-PINGRES=0
-PREVSTATE=0
-
 
 # exit on Ctrl-C
 trap "exit" INT
@@ -30,6 +23,14 @@ then
 	echo "Usage: $(basename $0) w.x.y.z"
 	exit 1
 fi
+
+DEVICE=$1 
+CMD="arping $DEVICE -I $INTERFACE -c $HYSTERISIS -f -w $HYSTERISIS"
+
+# housekeeping - used internally
+PINGRES=0
+PREVSTATE=0
+
 
 function ping_dev
 {
