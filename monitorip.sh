@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -x
 # Sample Usage
-# monitorip.sh 192.168.1.5
+# monitorip.sh -u switch_light_on -d switch_light_off 192.168.1.5
 #
 ##############################################################################
 #  *****     Configuration parameters that need to be modified     *****
