@@ -13,4 +13,10 @@ Mon 11 Jul 18:11:30 IST 2016 : 192.168.1.5 came online
 Can be used to control a sonoff(ESP 8266)   
 eg. switch lights on when mobile phone/laptop is detected in wifi zone and switch off when device leaves the wifi.
 
-ESP 8266 can be loaded with loaded with lua firmware from https://github.com/elric91/nodemcu_sonoff
+ESP 8266 can be loaded with loaded with 
+
+1. lua firmware from https://github.com/elric91/nodemcu_sonoff
+
+OR 
+
+2. alternative firmware from https://bitbucket.org/xoseperez/espurna
